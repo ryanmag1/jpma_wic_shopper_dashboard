@@ -1,0 +1,2 @@
+module DailyTotalsHelper
+end

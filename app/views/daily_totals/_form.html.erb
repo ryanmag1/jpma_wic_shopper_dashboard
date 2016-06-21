@@ -1,0 +1,62 @@
+<%= form_for(@daily_total, html: { class: "form-horizontal", role: "form" }) do |f| %>
+  <% if @daily_total.errors.any? %>
+    <div class="alert alert-danger alert-dismissable" role="alert">
+      <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+      <h4><%= pluralize(@daily_total.errors.count, "error") %> prohibited this daily_total from being saved:</h4>
+
+      <ul>
+      <% @daily_total.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :date, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.date_select :date, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :new_card_regs, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.number_field :new_card_regs, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :daily_rx_users, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.number_field :daily_rx_users, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :device_registrations, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.number_field :device_registrations, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :device_activity, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.number_field :device_activity, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :peoplescanning, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.number_field :peoplescanning, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :items_scanned, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= f.number_field :items_scanned, class: "form-control" %>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= f.submit class: "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>

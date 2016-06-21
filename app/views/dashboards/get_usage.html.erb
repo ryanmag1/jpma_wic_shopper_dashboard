@@ -1,0 +1,62 @@
+<div class="page-header">
+  <h1>WicShopperDashboard#get_usage</h1>
+</div>
+<p>Find me in app/views/ashboard/get_usage.html.erb</p>
+<div class="container-fluid">
+  <div class=jumbotron>
+    <!--<div class=jumbotron><-->
+    <%= form_tag update_usage_path do %>
+      <div class="input-daterange" data-behaviour='datepicker' id="datepicker" >
+        <%  @begin_date = Date.strptime(@begin_date, "%Y%m%d").strftime("%m/%d/%Y")%>
+        <%  @end_date = Date.strptime(@end_date, "%Y%m%d").strftime("%m/%d/%Y")%>
+        <%= label_tag :begin_date %>
+        <%= text_field_tag :begin_date, @begin_date  %>
+        <%= label_tag :end_date %>
+        <%= text_field_tag :end_date,@end_date %>
+      </div>
+      <p> <%= submit_tag 'Submit', class: "btn btn-primary" %> </p>
+    <% end %>
+
+    <div class="table-responsive">
+      <table class="table table-striped table-bordered table-hover">
+        <thead>
+        <tr>
+          <th>WIC Authority</th>
+          <th>Card Registrations</th>
+          <th>Daily RX Users</th>
+          <th>Dev Registrations</th>
+          <th>Dev Activity</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <p>
+          <% @mrg.each do |rows| %>
+            <tr>
+              <td><%= rows["Name"] %></td>
+              <td><%= rows["RegistrationCount"] %></td>
+              <td><%= rows["UserCount"] %></td>
+              <td><%= rows["DeviceRegistrations"] %></td>
+              <td><%= rows["DeviceActivity"] %></td>
+          <% end %>
+          <tr>
+            <th>Totals</th>
+            <th><%= @total_registration_count %></th>
+            <th><%= @total_user_count %></th>
+            <th><%= @total_device_registrations_count %></th>
+            <th><%= @total_device_activity_count %></th>
+          </tr>
+        </p>
+      </table>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+      $('#datepicker')
+        .datepicker({
+          todayHighlight: true,
+          orientation: "bottom auto",
+          autoclose: true,
+    })
+  </script>
+</div>
