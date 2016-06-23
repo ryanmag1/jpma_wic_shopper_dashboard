@@ -34,6 +34,7 @@ group :development, :test do
   gem 'bootstrap-sass'
   gem 'bootstrap-datepicker-rails'
   gem 'twitter-bootstrap-rails'
+  gem 'devise', '~> 4.1', '>= 4.1.1'
 end
 
 group :development do
