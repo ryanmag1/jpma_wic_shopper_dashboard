@@ -34,6 +34,7 @@ group :development, :test do
   gem 'bootstrap-sass'
   gem 'bootstrap-datepicker-rails'
   gem 'twitter-bootstrap-rails'
+  gem 'sqlite3'
 end
 
 group :development do
