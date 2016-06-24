@@ -10,7 +10,7 @@ require "action_mailer/railtie"
 require "action_view/railtie"
 require "sprockets/railtie"
 # require "rails/test_unit/railtie"
-config.assets.initialize_on_precompile = false
+#config.assets.initialize_on_precompile = false
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -33,6 +33,5 @@ module WicshopperDashboard
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
     # config/application.rb
-    config.assets.initialize_on_precompile = false
   end
 end
