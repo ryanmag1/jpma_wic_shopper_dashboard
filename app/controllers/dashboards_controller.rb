@@ -1,6 +1,6 @@
 class DashboardsController < ApplicationController
-  before_action :set_dashboard, only: [:show, :edit, :update, :destroy]
-
+  #before_action :set_dashboard, only: [:show, :edit, :update, :destroy]
+before_filter :authenticate_user!
 
   require 'open-uri'
   require 'json'

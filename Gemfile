@@ -35,7 +35,15 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+<<<<<<< HEAD
   gem 'sqlite3'
+=======
+  gem 'bootstrap-generators'
+  gem 'bootstrap-sass'
+  gem 'bootstrap-datepicker-rails'
+  gem 'twitter-bootstrap-rails'
+  gem 'devise', '~> 4.1', '>= 4.1.1'
+>>>>>>> add_user_auth_master
 end
 
 group :development do
