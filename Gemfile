@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 #gem 'bootstrap-generators'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
-#gem 'sqlite3'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
@@ -11,6 +10,7 @@ gem 'twitter-bootstrap-rails'
 gem 'bootstrap-generators'
 gem 'bootstrap-sass'
 gem 'bootstrap-datepicker-rails'
+gem 'devise', '~> 4.1', '>= 4.1.1'
 
 
 # Use jquery as the JavaScript library
