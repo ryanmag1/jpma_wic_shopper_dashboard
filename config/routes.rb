@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   post 'update_usage' => 'dashboards#get_usage'
   root 'dashboards#get_usage'
 
-
+  get 'totals' => 'daily_totals#index'
 end
